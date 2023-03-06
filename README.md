@@ -4,11 +4,11 @@ _La prueba fue realizada con CSS/HTML/Javascript_
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+_Estas instrucciones te permitirán obtener una copia del proyecto y ponerlo en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
 ### Pre-requisitos 📋
 
-_Clona el repositorio en tu local_
+_Clona este repositorio en tu local_
 
 ### Ejecutando el test 🔧
 
@@ -21,7 +21,6 @@ _Puedes correrlo directamente haciendo click en el archivo index.html ó bien co
 
 ### Menú desplegado
 ![menu](https://user-images.githubusercontent.com/21273404/223209747-e9d12931-374e-44a3-bd98-1c226b5ec0b8.png)
-
 
 
 ## Construido con 🛠️
