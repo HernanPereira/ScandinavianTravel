@@ -1,0 +1,45 @@
+.slide-up {
+  animation: slide-up var(--animation-delay) ease;
+}
+.slide-down {
+  animation: slide-down var(--animation-delay) cubic-bezier(0.93, 0.38, 0.77, 0.9);
+}
+.slide-left-to-right {
+  animation: slide-left-to-right var(--animation-delay) ease;
+}
+.slide-right-to-left {
+  animation: slide-right-to-left var(--animation-delay) ease;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes slide-down {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes slide-left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-right-to-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

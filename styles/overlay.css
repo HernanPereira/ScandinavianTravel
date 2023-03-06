@@ -1,0 +1,196 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay .box-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.overlay .box-right {
+  background-color: var(--black);
+  width: 14.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  position: relative;
+}
+
+.overlay .box-right.slide-up, .overlay .box-right.slide-down {
+  visibility: visible;
+}
+
+.overlay .menu-nav .language{
+  position: absolute;
+  top: 1.563rem;
+  left: 1.25rem;
+  color: var(--orange);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 0.875rem;
+
+  display: none;
+}
+
+.overlay .menu-nav .language ul {
+  display: flex;
+  gap: .25rem;
+}
+
+.overlay .menu-nav .main-menu {
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: .05rem;
+  font-size: 2.250rem;
+  line-height: 2.750rem;
+}
+
+.overlay .menu-nav .main-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.overlay .menu-nav .main-menu li {
+  opacity: 0;
+  transition: all .25s cubic-bezier(0.8, 0.8, 0.2, 1);
+  transform: translateY(50px);
+}
+
+.overlay .menu-nav .main-menu li.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay .menu-nav .main-menu a {
+  color: var(--black);
+  text-shadow:
+  -1px -1px 0 var(--orange),
+  1px -1px 0 var(--orange),
+  -1px 1px 0 var(--orange),
+  1px 1px 0 var(--orange);
+  transition: color var(--animation-delay-fast) linear;
+}
+
+.overlay .menu-nav .main-menu a:hover {
+  color: var(--orange);
+  text-shadow:
+  -1px -1px 0 var(--black),
+  1px -1px 0 var(--black),
+  -1px 1px 0 var(--black),
+  1px 1px 0 var(--black);
+}
+
+
+.overlay .box-left {
+  width: calc(100% - 14.625rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay .box-left .box-left__image {
+  background: transparent url('./../images/bg-menu-mobile.png') no-repeat right center;
+  background-size: cover;
+  height: calc(100% - 20.750rem);
+  visibility: hidden;
+}
+
+.overlay .box-left .box-left__image.slide-left-to-right, .overlay .box-left .box-left__image.slide-right-to-left {
+  visibility: visible;
+}
+
+.overlay .box-left .box-left__footer {
+  height: 20.750rem;
+  display: flex;
+}
+
+.overlay .box-left .box-left__footer .box-left__social {
+  background-color: var(--orange);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all var(--animation-delay-fast) linear;
+  opacity: 0;
+}
+.overlay .box-left .box-left__footer .box-left__social.bg-transition {
+  opacity: 1;
+}
+
+.overlay .box-left .box-left__footer .box-left__social .box-left__social_overlay  {
+  background-color: var(--white);
+  display: flex;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 1;
+  transition: all var(--animation-delay-slow) linear;
+}
+.overlay .box-left .box-left__footer .box-left__social.bg-transition .box-left__social_overlay  {
+  width: 0;
+  opacity: 0;
+}
+
+.overlay .box-left .box-left__footer .box-left__social ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.overlay .box-left .box-left__footer .box-left__social ul li {
+  width: 2.5rem;
+}
+.overlay .box-left .box-left__footer .box-left__social ul li a {
+  display: flex;
+}
+
+.overlay .box-left .box-left__footer .box-left__social ul li img {
+  width: 100%;
+  transition: all var(--animation-delay-fast) linear;
+  filter: brightness(0);
+}
+
+.overlay .box-left .box-left__footer .box-left__quote {
+  color: transparent;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  transition: all var(--animation-delay-fast) linear;
+
+  display: none;
+}
+.overlay .box-left .box-left__footer .box-left__quote.color-transition {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.overlay .box-left .box-left__footer .box-left__quote p {
+  max-width: 19.688rem;
+}
